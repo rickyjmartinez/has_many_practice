@@ -1,5 +1,6 @@
 class ClownsController < ApplicationController
   def index
-    render json: { message: "hi" }
+    @clowns = Clown.all
+    render :index
   end
 end
